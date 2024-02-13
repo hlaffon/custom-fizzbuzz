@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package model;
+
+option go_package = "github.com/custom-fizzbuzz/pkg/pb";
+
+import "google/protobuf/wrappers.proto";
+
+service Api {
+  // Service PrintNumbers
+  rpc PrintNumbers (Request) returns (Response) {}
+}
+
+message Request {
+  google.protobuf.Int32Value MaxNumber = 1;
+  google.protobuf.Int32Value FirstMultiple = 2;
+  google.protobuf.Int32Value SecondMultiple = 3;
+  google.protobuf.StringValue FirstAlias = 4;
+  google.protobuf.StringValue SecondAlias = 5;
+}
+
+message Response{
+  repeated  string numbers = 1;
+}
