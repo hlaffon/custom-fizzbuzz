@@ -30,8 +30,11 @@ Or you can run it in a docker container:
 `docker compose up -d
 `
 
-(To stop the container:
-`docker compose down`)
+To stop the container:
+`docker compose down`
+
+To re-build the image:
+`docker compose build`
 
 We offer two ways of retrieving the requested data, depending on your needs and ability to implement a given client.
 The first one is a http REST API with JSON format which is widely used, human-readable and easy to request
